@@ -60,9 +60,3 @@ class CourtCase:
             if b == 1:
                 self.resolution = input('Вводите: ')
         self.is_finished = True
-
-
-
-
-    
-
