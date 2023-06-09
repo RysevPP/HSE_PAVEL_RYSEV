@@ -12,6 +12,7 @@
 import requests
 from bs4 import BeautifulSoup
 import json
+import pprint
 
 class ParserCBRF:
 
@@ -38,9 +39,15 @@ class ParserCBRF:
         with open("credit_organizations.json", "w") as f:
             json.dump(self.baza, f)
 
+    def __pechat(self):
+        with open("credit_organizations.json", "r") as f:
+            load = json.load(f)
+            pprint.pprint(load, sort_dicts=False)
+
     def start(self):
         self.__parser()
         self.__file()
+        self.__pechat()
 
 if __name__ == '__main__':
     a = ParserCBRF()
