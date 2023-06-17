@@ -266,4 +266,3 @@ if __name__ == '__main__':
     a = ParserCBRF()
     a.start()
     menu()
-

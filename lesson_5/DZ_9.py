@@ -56,17 +56,4 @@ if __name__ == '__main__':
 
 
 
-# a = lines_find(one, two)
-# print(one)
-# print(a)
-# #
-# b = binary_find(one, two)
-# print(one)
-# print(b)
-
-
-
-
-
-
 
