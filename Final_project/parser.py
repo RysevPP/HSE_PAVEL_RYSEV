@@ -2,7 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 import json
 from pathlib import Path
-# import pprint
 
 
 class ParserCBRF:
@@ -30,22 +29,11 @@ class ParserCBRF:
                                  name_column[6]:row[6], name_column[2]:row[2],
                                  name_column[7]:row[7].replace('\n', 'Действует').replace('ОТЗ', 'Отозвана').replace('АНН', 'Аннулирована').replace('РЕГ', 'Не получена')}
 
-
-    # def __file(self):
-    #     with open("all_credit_organizations.json", "w") as f:
-    #         json.dump(self.base, f)
-
     def __file(self):
         with open(self.file_base, 'w') as f:
             json.dump(self.base, f)
-
-    # def __printing(self):
-    #     with open(self.way_file_base, "r") as f:
-    #         load = json.load(f)
-    #         pprint.pprint(load, sort_dicts=False)
 
     def start(self):
         self.__parser()
         self.__file()
         return (self.base)
-        # self.__printing()
